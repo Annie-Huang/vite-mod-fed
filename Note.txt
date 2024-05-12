@@ -39,6 +39,7 @@ Done. Now run:
 
 PS C:\react\vite-mod-fed> cd .\host\
 PS C:\react\vite-mod-fed\host> pnpm install
+PS C:\react\vite-mod-fed\host> pnpm add @originjs/vite-plugin-federation -D
 
 
 
@@ -46,3 +47,5 @@ PS C:\react\vite-mod-fed\host> pnpm install
 
 "dev": "vite --port 5001 --strictPort",
 The ""--port 5001 --strictPort" part meaning running in port 5001, and if you couldn't get hold of 5001, don't do anything, just fail silently.
+Only the remote need to have a specific port because all other app is going to reference this port number for remote setting.
+But the host app does not matter which port it is using
