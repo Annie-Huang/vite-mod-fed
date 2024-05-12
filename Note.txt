@@ -6,3 +6,16 @@ https://github.com/Annie-Huang/vite-mod-fed
 https://github.com/originjs/vite-plugin-federation
 
 ---------------------------------------------------------------------
+
+PS C:\react\vite-mod-fed> pnpm create vite remote --template react-ts
+
+Scaffolding project in C:\react\vite-mod-fed\remote...
+
+Done. Now run:
+
+  cd remote
+  pnpm install
+  pnpm run dev
+
+PS C:\react\vite-mod-fed>
+
