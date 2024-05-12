@@ -20,3 +20,8 @@ Done. Now run:
 PS C:\react\vite-mod-fed> cd .\remote\
 PS C:\react\vite-mod-fed\remote> pnpm add @originjs/vite-plugin-federation -D
 
+
+----------------------------------------------------------
+
+"dev": "vite --port 5001 --strictPort",
+The ""--port 5001 --strictPort" part meaning running in port 5001, and if you couldn't get hold of 5001, don't do anything, just fail silently.
