@@ -1,0 +1,7 @@
+Vite and Module Federation Makes Micro-Frontends EASY! (https://www.youtube.com/watch?v=t-nchkL9yIg)
+
+https://github.com/jherr/vite-mod-fed
+
+https://github.com/originjs/vite-plugin-federation
+
+---------------------------------------------------------------------
