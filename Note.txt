@@ -40,7 +40,8 @@ Done. Now run:
 PS C:\react\vite-mod-fed> cd .\host\
 PS C:\react\vite-mod-fed\host> pnpm install
 PS C:\react\vite-mod-fed\host> pnpm add @originjs/vite-plugin-federation -D
-
+PS C:\react\vite-mod-fed\host> npm run dev
+http://localhost:5173/      <-- it will randomly sprint up the port number as we didn't enforce it to certain port number.
 
 
 ----------------------------------------------------------
