@@ -2,6 +2,8 @@ Vite and Module Federation Makes Micro-Frontends EASY! (https://www.youtube.com/
 
 https://github.com/jherr/vite-mod-fed
 https://github.com/Annie-Huang/vite-mod-fed
+Keep in mind this tutorial is created in  4 Apr 2023 and I am doing this in 12/05/2024.
+And I am doing it in typescript as well. so bound to have a lot of lib upgrade and twisting.
 
 https://github.com/originjs/vite-plugin-federation
 
