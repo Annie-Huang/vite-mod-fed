@@ -44,9 +44,24 @@ PS C:\react\vite-mod-fed\host> npm run dev
 http://localhost:5173/      <-- it will randomly sprint up the port number as we didn't enforce it to certain port number.
 
 
+Whenever you change a vite.config.ts file, you will need to:
+PS C:\react\vite-mod-fed\remote> npm run build      <-- create the remoteEntry.js file
+PS C:\react\vite-mod-fed\remote> npm run serve
+http://localhost:5001/assets/remoteEntry.js     <-- To check if the remote bundle is created successfully.
+
+
 ----------------------------------------------------------
 
 "dev": "vite --port 5001 --strictPort",
 The ""--port 5001 --strictPort" part meaning running in port 5001, and if you couldn't get hold of 5001, don't do anything, just fail silently.
 Only the remote need to have a specific port because all other app is going to reference this port number for remote setting.
 But the host app does not matter which port it is using
+
+
+The location of the remoteEntry.js file:
+This is going into the assets directory and that's because this remoteEntry file and all of the bundles that are references are just JavaScript files.
+And they should be treated and deployed like assets. So what happens to the sharing between two applications if the application that's sharing that component
+that I rely on goes down? Well, nothing, because what you should do is you should go and deploy your assets, in this case,
+all your CSS, your JavaScript, your images, all of it should be deployed to a static asset store, and that includes all the federate modules.
+So yes, your application could go down, but that's just the server side of your application. The static assets should never go down because those should
+always be deployed on something like S3, which is never going to go down. And if S3 goes go down, well, then it's a holiday for everybody, so don't worry about that.
