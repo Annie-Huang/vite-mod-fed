@@ -21,6 +21,25 @@ Done. Now run:
 
 PS C:\react\vite-mod-fed> cd .\remote\
 PS C:\react\vite-mod-fed\remote> pnpm add @originjs/vite-plugin-federation -D
+PS C:\react\vite-mod-fed\remote> npm run dev
+http://localhost:5001/
+
+
+-----------------------------------
+
+PS C:\react\vite-mod-fed> pnpm create vite host --template react-ts
+
+Scaffolding project in C:\react\vite-mod-fed\host...
+
+Done. Now run:
+
+  cd host
+  pnpm install
+  pnpm run dev
+
+PS C:\react\vite-mod-fed> cd .\host\
+PS C:\react\vite-mod-fed\host> pnpm install
+
 
 
 ----------------------------------------------------------
