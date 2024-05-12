@@ -17,5 +17,6 @@ Done. Now run:
   pnpm install
   pnpm run dev
 
-PS C:\react\vite-mod-fed>
+PS C:\react\vite-mod-fed> cd .\remote\
+PS C:\react\vite-mod-fed\remote> pnpm add @originjs/vite-plugin-federation -D
 
