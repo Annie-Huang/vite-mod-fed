@@ -22,7 +22,15 @@ Done. Now run:
 PS C:\react\vite-mod-fed> cd .\remote\
 PS C:\react\vite-mod-fed\remote> pnpm add @originjs/vite-plugin-federation -D
 PS C:\react\vite-mod-fed\remote> npm run dev
+PS C:\react\vite-mod-fed\remote> pnpm add jotai
 http://localhost:5001/
+
+
+Whenever you change a vite.config.ts file, you will need to:
+PS C:\react\vite-mod-fed\remote> npm run build      <-- create the remoteEntry.js file
+PS C:\react\vite-mod-fed\remote> npm run serve  (or npm run preview)
+http://localhost:5001/assets/remoteEntry.js     <-- To check if the remote bundle is created successfully.
+
 
 
 -----------------------------------
@@ -43,11 +51,6 @@ PS C:\react\vite-mod-fed\host> pnpm add @originjs/vite-plugin-federation -D
 PS C:\react\vite-mod-fed\host> npm run dev
 http://localhost:5173/      <-- it will randomly sprint up the port number as we didn't enforce it to certain port number.
 
-
-Whenever you change a vite.config.ts file, you will need to:
-PS C:\react\vite-mod-fed\remote> npm run build      <-- create the remoteEntry.js file
-PS C:\react\vite-mod-fed\remote> npm run serve  (or npm run preview)
-http://localhost:5001/assets/remoteEntry.js     <-- To check if the remote bundle is created successfully.
 
 
 ----------------------------------------------------------
@@ -71,7 +74,16 @@ shared: ['react', 'react-dom']
 So we don't en dup downloading multiple copies because that would just be bad for both performance and also for the stability of the app.
 So this allows for the module federation to arbitrate between the host and remote and say, Hey, I've got React. Great, you've got React. Cool.
 
-
+Share state
+One of the thing you want to do with micro frontend is share a state between the host application and the micro frontend, for example, the user ID.
+Now the way that I strongly recommend doing that is with an atomic state manager, either Recoil or Jotai. Both of those work well.
+E.g.
+We're going to have a shared state store in remote application that's going to hold the value for click me and then we're going to
+attach to that in the application itself so taht when I click 'click me', count update and we shared between the two button in the remote app.
+It's pretty rudimentary but it will show sharing between the host application, in this case remote and its own button.
+And then over the Host application, we'll do the same thing in host. so we'll see how to share state and subscribe to shared state.
+https://recoiljs.org/
+https://jotai.org/
 
 
 
