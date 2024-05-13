@@ -65,3 +65,19 @@ that I rely on goes down? Well, nothing, because what you should do is you shoul
 all your CSS, your JavaScript, your images, all of it should be deployed to a static asset store, and that includes all the federate modules.
 So yes, your application could go down, but that's just the server side of your application. The static assets should never go down because those should
 always be deployed on something like S3, which is never going to go down. And if S3 goes go down, well, then it's a holiday for everybody, so don't worry about that.
+
+
+shared: ['react', 'react-dom']
+So we don't en dup downloading multiple copies because that would just be bad for both performance and also for the stability of the app.
+So this allows for the module federation to arbitrate between the host and remote and say, Hey, I've got React. Great, you've got React. Cool.
+
+
+
+
+
+
+
+
+
+
+
