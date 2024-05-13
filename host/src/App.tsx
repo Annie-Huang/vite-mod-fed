@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 
+// @ts-ignore
 import Button from 'remoteApp/Button';
 
 function App() {

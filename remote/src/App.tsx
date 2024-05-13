@@ -1,9 +1,12 @@
-import { useState } from 'react';
+// import { useState } from 'react';
 import './App.css';
+
 import Button from './Button.tsx';
+import useCount from './store';
 
 function App() {
-  const [count, setCount] = useState(0);
+  // const [count, setCount] = useState(0);
+  const [count, setCount] = useCount();
 
   return (
     <div className='App'>
