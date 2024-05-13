@@ -86,8 +86,29 @@ https://recoiljs.org/
 https://jotai.org/
 
 
+In the C:\react\vite-mod-fed\remote\src\store.ts
+  We will have a custom hook called useCount, which will return a use atom that's going to give us back a value for it
+  as well as a setter in a tuple pretty much like useState. So that will be the default output of this store,
+  will be this useCount and that we can use for our count.
+In the C:\react\vite-mod-fed\remote\vite.config.ts
+  And you also need to share the store between the remote application and the host application in vite.config.ts.
+  (and need to add the jotia library into the shared list as well)
+In the C:\react\vite-mod-fed\host\src\App.tsx
+   const [count, setCount] = useStore();
+   This force both <button> and <Button> use the same useCount hook defined in C:\react\vite-mod-fed\remote\src\store.ts
+   so the count value is consistent updated.
+   "Note01 - Each app can shared state between own App button and remote app Button.jpg"
+In this pattern, you can have your userId, you can have your cart, you can have all these all on shared pieces of atomic state.
 
-
+Why choose Recoil or Jotai over Rudux and Zustand
+  Now why do i recommend using something like Jotai share atoms for sharing state between a host application and its micro frontends.
+  as opposed to something is, say, more conventional like Redux or Zustand? Well, what are we trying to accomplish with shared state?
+  We're trying to accomplish a coupling between the host application and the micro frontends. The more state that you share between
+  those two things, the tighter that coupling becomes. If you have something just like the user ID and then the contents of the cart,
+  that's a pretty small surface area to exchange between those two. The great thing about the atomic state management like this is
+  to extends the surface area that you want to share between those two applications, you need to go and add new atoms.
+  Whereas with Redux ro Zustand, you can just extend the size of the store. So there's not friction to adding new data that's sharing
+  between the application and the micro frontend. And that's not great. Because the more data you share, the tighter the coupling becomes.
 
 
 
