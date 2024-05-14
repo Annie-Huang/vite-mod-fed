@@ -144,4 +144,24 @@ Because vite is creating ECMAScript (ES6), we need to enforce webpack to do it a
   inject: false,
 
 
+monorepo-version:
+monorepo set up if we don't do module federation, you can see store, ui etc are all packages. and it is use to package up in build time
+and then used by the app level.
+
+Build Time Sharing:
+Pros:
+  - Typescript Support
+  - Unit Testing
+  - Complete Applications
+Cons:
+  - No Runtime Sharing
+
+Runtime Sharing
+Pros:
+  - Runtime Code Sharing
+Cons:
+  - TypeScript Support      <-- This may really be a killer....
+  - Unit Testing
+  - Runtime Crashes
+
 
