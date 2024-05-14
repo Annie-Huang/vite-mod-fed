@@ -52,6 +52,26 @@ PS C:\react\vite-mod-fed\host> npm run dev
 http://localhost:5173/      <-- it will randomly sprint up the port number as we didn't enforce it to certain port number.
 
 
+-----------------------------------
+
+PS C:\react\vite-mod-fed> npx create-mf-app
+? Pick the name of your app: wp-host
+? Project Type: Application
+? Port number: 8080
+? Framework: react
+? Language: typescript
+? CSS: CSS
+? Packer: Webpack
+Your 'wp-host' project is ready to go.
+
+Next steps:
+
+▶️ cd wp-host
+▶️ npm install
+▶️ npm start
+
+PS C:\react\vite-mod-fed>
+
 
 ----------------------------------------------------------
 
