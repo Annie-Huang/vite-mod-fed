@@ -70,7 +70,9 @@ Next steps:
 ▶️ npm install
 ▶️ npm start
 
-PS C:\react\vite-mod-fed>
+PS C:\react\vite-mod-fed> cd .\wp-host\
+PS C:\react\vite-mod-fed\wp-host> npm install
+
 
 
 ----------------------------------------------------------
