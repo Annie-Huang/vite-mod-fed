@@ -39,9 +39,15 @@ module.exports = (_, argv) => ({
     ],
   },
 
+  target: 'es2020',
+  experiments: {
+    outputModule: true,
+  },
+
   plugins: [
     new ModuleFederationPlugin({
       name: 'wp_host',
+      library: { type: 'module' },
       filename: 'remoteEntry.js',
       remotes: {
         remote: 'http://localhost:5001/assets/remoteEntry.js',
@@ -60,7 +66,8 @@ module.exports = (_, argv) => ({
       },
     }),
     new HtmlWebPackPlugin({
-      template: './src/index.html',
+      template: './index.ejs',
+      inject: false,
     }),
     new Dotenv(),
   ],

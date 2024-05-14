@@ -133,6 +133,15 @@ Why choose Recoil or Jotai over Rudux and Zustand
   between the application and the micro frontend. And that's not great. Because the more data you share, the tighter the coupling becomes.
 
 
+Webpack app using Vite remote
+Because vite is creating ECMAScript (ES6), we need to enforce webpack to do it as well. In webpack.config.js:
+  library: { type: "module" },    <-- Setting "type": "module" in a package.json does force all files below this package.json to be ECMAScript Modules.
+  target: 'es2020',
+  experiments: {
+    outputModule: true,
+  },
+  template: "./index.ejs",
+  inject: false,
 
 
 
