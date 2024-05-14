@@ -3,8 +3,11 @@ import ReactDOM from 'react-dom/client';
 
 import './index.css';
 
-import Button from 'remote/Button';
+// @ts-ignore
+import ButtonModule from 'remote/Button';
+console.log(ButtonModule);
 
+const Button = ButtonModule.default;
 console.log(Button);
 
 const App = () => (
@@ -13,6 +16,7 @@ const App = () => (
     <div>Framework: react</div>
     <div>Language: TypeScript</div>
     <div>CSS: Empty CSS</div>
+    <Button />
   </div>
 );
 const rootElement = document.getElementById('app');
