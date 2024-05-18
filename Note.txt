@@ -92,6 +92,8 @@ Done. Now run:
 PS C:\react\vite-mod-fed> cd .\host-2
 PS C:\react\vite-mod-fed\host-2> pnpm install
 PS C:\react\vite-mod-fed\host-2> pnpm add @originjs/vite-plugin-federation -D
+PS C:\react\vite-mod-fed\host-2> npm run dev
+http://localhost:5002/
 
 
 

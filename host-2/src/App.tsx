@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+// import { useState } from 'react';
+import './App.css';
+
+// @ts-ignore
+import Button from 'remoteApp/Button';
+
+// You can change it to useStore because we "export default useCount;", you can call it any useXXX you like.
+// @ts-ignore
+import useStore from 'remoteApp/store';
 
 function App() {
-  const [count, setCount] = useState(0)
+  // The <button> count (Text with 'count is') is different from <Button> (Text with 'Click me') because they are from different state.
+  // const [count, setCount] = useState(0);
+
+  // This force both <button> and <Button> use the same useCount hook defined in C:\react\vite-mod-fed\remote\src\store.ts
+  // so the count value is consistent updated.
+  // "Note01 - Each app can shared state between own App button and remote app Button.jpg"
+  const [count, setCount] = useStore();
 
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
+    <div className='App'>
+      <h1>Host-2 Application</h1>
+      <Button />
+      <div className='card'>
+        <button onClick={() => setCount((count: number) => count + 1)}>
           count is {count}
         </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+    </div>
+  );
 }
 
-export default App
+export default App;
