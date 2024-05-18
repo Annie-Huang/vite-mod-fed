@@ -7,9 +7,12 @@ export default defineConfig({
   plugins: [
     react(),
     federation({
-      name: 'app',
+      name: 'host-2',
       remotes: {
         remoteApp: 'http://localhost:5001/assets/remoteEntry.js',
+      },
+      exposes: {
+        './ButtonWrapper': './src/ButtonWrapper',
       },
       shared: ['react', 'react-dom'],
     }),

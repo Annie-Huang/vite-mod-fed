@@ -3,6 +3,7 @@ import './App.css';
 
 // @ts-ignore
 import Button from 'remoteApp/Button';
+import ButtonWrapper from 'host2App/ButtonWrapper';
 
 // You can change it to useStore because we "export default useCount;", you can call it any useXXX you like.
 // @ts-ignore
@@ -26,6 +27,7 @@ function App() {
           count is {count}
         </button>
       </div>
+      <ButtonWrapper />
     </div>
   );
 }

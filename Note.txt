@@ -95,12 +95,11 @@ PS C:\react\vite-mod-fed\host-2> pnpm add @originjs/vite-plugin-federation -D
 PS C:\react\vite-mod-fed\host-2> npm run dev
 http://localhost:5002/
 
-
-
+PS C:\react\vite-mod-fed\host-2> npm run build
+PS C:\react\vite-mod-fed\host-2> npm run serve
 
 
 ----------------------------------------------------------
-
 
 
 
