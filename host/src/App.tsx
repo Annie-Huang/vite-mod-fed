@@ -3,6 +3,7 @@ import './App.css';
 
 // @ts-ignore
 import Button from 'remoteApp/Button';
+// @ts-ignore
 import ButtonWrapper from 'host2App/ButtonWrapper';
 
 // You can change it to useStore because we "export default useCount;", you can call it any useXXX you like.
