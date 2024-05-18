@@ -75,7 +75,34 @@ PS C:\react\vite-mod-fed\wp-host> npm install
 PS C:\react\vite-mod-fed\wp-host> npm run start
 http://localhost:8080/
 
+-----------------------------------
+
+PS C:\react\vite-mod-fed> pnpm create vite host-2 --template react-ts
+.../18f8907ed97-26e8                     |   +1 +
+.../18f8907ed97-26e8                     | Progress: resolved 1, reused 1, downloaded 0, added 1, done
+
+Scaffolding project in C:\react\vite-mod-fed\host-2...
+
+Done. Now run:
+
+  cd host-2
+  pnpm install
+  pnpm run dev
+
+PS C:\react\vite-mod-fed> cd .\host-2
+PS C:\react\vite-mod-fed\host-2> pnpm install
+
+
+
+
+
+
 ----------------------------------------------------------
+
+
+
+
+
 
 "dev": "vite --port 5001 --strictPort",
 The ""--port 5001 --strictPort" part meaning running in port 5001, and if you couldn't get hold of 5001, don't do anything, just fail silently.
