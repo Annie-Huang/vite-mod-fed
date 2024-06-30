@@ -129,7 +129,7 @@ One of the thing you want to do with micro frontend is share a state between the
 Now the way that I strongly recommend doing that is with an atomic state manager, either Recoil or Jotai. Both of those work well.
 E.g.
 We're going to have a shared state store in remote application that's going to hold the value for click me and then we're going to
-attach to that in the application itself so taht when I click 'click me', count update and we shared between the two button in the remote app.
+attach to that in the application itself so that when I click 'click me', count update and we shared between the two button in the remote app.
 It's pretty rudimentary but it will show sharing between the host application, in this case remote and its own button.
 And then over the Host application, we'll do the same thing in host. so we'll see how to share state and subscribe to shared state.
 https://recoiljs.org/
@@ -191,5 +191,14 @@ Cons:
   - TypeScript Support      <-- This may really be a killer....
   - Unit Testing
   - Runtime Crashes
+
+
+How to start this app:
+PS C:\react\vite-mod-fed\remote> npm run build      <-- create the remoteEntry.js file
+PS C:\react\vite-mod-fed\remote> npm run serve  (or npm run preview)
+PS C:\react\vite-mod-fed\host-2> npm run build
+PS C:\react\vite-mod-fed\host-2> npm run serve
+PS C:\react\vite-mod-fed\host> npm run dev
+
 
 
